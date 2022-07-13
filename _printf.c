@@ -24,6 +24,7 @@ void cleanup(va_list args, buffer_t *output)
  *
  * Return: The number of characters stored to output.
  */
+
 int run_printf(const char *format, va_list args, buffer_t *output)
 {
 	int i, wid, prec, ret = 0;
@@ -82,7 +83,7 @@ int _printf(const char *format, ...)
 	return (-1);
 
 	va_start(args, format);
-
 	ret = run_printf(format, args, output);
+
 	return (ret);
 }
