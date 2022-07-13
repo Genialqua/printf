@@ -80,7 +80,9 @@ int _printf(const char *format, ...)
 	output = init_buffer();
 	if (output == NULL)
 	return (-1);
+
 	va_start(args, format);
+
 	ret = run_printf(format, args, output);
 	return (ret);
 }
